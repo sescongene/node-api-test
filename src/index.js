@@ -22,7 +22,7 @@ app.post(
       goodbyes: ["goodbye", "bye"],
     };
 
-    const message = req.body.message.split(" ");
+    const message = req.body.message.replace(/[^a-zA-Z ]/g, " ").split(" ");
 
     let greetings = "";
 
